@@ -1,0 +1,32 @@
+# Configuration for building only libOSMesa on Cray Compute Node Linux.
+# It is the same as linux-osmesa (no Xlib driver) but uses static linking and excludes -DPTHREADS
+
+include $(TOP)/configs/default
+
+CONFIG_NAME = cnl-osmesa-gnu
+
+# Compiler and flags
+CC = cc
+CXX = CC
+CFLAGS = -O3 -ansi -pedantic -fPIC -ffast-math -D_POSIX_SOURCE -D_POSIX_C_SOURCE=199309L -D_SVID_SOURCE -D_BSD_SOURCE
+CXXFLAGS = -O3 -ansi -pedantic -fPIC -ffast-math -D_POSIX_SOURCE -D_POSIX_C_SOURCE=199309L -D_SVID_SOURCE -D_BSD_SOURCE
+
+# Work around aliasing bugs - developers should comment this out
+CFLAGS += -fno-strict-aliasing
+CXXFLAGS += -fno-strict-aliasing
+
+MKLIB_OPTIONS = -static
+
+OSMESA_LIB_NAME = libOSMesa.a
+
+# Directories
+SRC_DIRS = mesa glu
+DRIVER_DIRS = osmesa
+PROGRAM_DIRS = osdemos
+
+
+# Dependencies
+OSMESA_LIB_DEPS = -lm
+GLU_LIB_DEPS = -L$(TOP)/$(LIB_DIR) -l$(OSMESA_LIB)
+APP_LIB_DEPS = -lOSMesa -lGLU -lm
+

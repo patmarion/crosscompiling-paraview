@@ -1,0 +1,5 @@
+diff -r original-ParaView3/VTK/Utilities/kwsys/DynamicLoader.cxx ParaView3/VTK/Utilities/kwsys/DynamicLoader.cxx
+456c456
+< #if defined(__gnu_blrts__) || defined(__LIBCATAMOUNT__)
+---
+> #if defined(__gnu_blrts__) || defined(__LIBCATAMOUNT__) || defined(__CRAYXT_COMPUTE_LINUX_TARGET)
