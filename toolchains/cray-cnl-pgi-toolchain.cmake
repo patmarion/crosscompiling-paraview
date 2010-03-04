@@ -9,8 +9,8 @@ set(CMAKE_CXX_COMPILER CC)
 # and a directory where you can install your own compiled software
 set(CMAKE_FIND_ROOT_PATH
     /opt/xt-pe/default
-    /opt/xt-mpt/default/mpich2-64/GP2
-    /usr/people/marionp/install
+    /opt/mpt/3.5.0/xt/mpich2/
+    /usr/people/pmarion/install/cnl
   )
 
 # adjust the default behaviour of the FIND_XXX() commands:

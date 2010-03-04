@@ -10,7 +10,7 @@ set(CMAKE_CXX_COMPILER CC)
 set(CMAKE_FIND_ROOT_PATH
     /opt/xt-pe/default
     /opt/mpt/3.5.0/xt/mpich2-gnu
-    /usr/people/marionp/install/cnl
+    /usr/people/pmarion/install/cnl
   )
 
 # adjust the default behaviour of the FIND_XXX() commands:
