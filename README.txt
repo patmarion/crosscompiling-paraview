@@ -25,7 +25,11 @@ Toolchains:
   This folder contains a toolchains folder.  It contains two toolchain files
   one for pgi and one for gnu.  Edit the toolchain files and replace
   /usr/people/pmarion/install/cnl with the directory where you installed the
-  cross compiled versions of python and osmesa.
+  cross compiled versions of python and osmesa.  Adjust the other paths to make
+  sure they are correct for your system.  Usually two other paths are required,
+  one for finding libraries for your compiler environment, and a path for finding
+  mpi libraries.  With these paths correctly specified, cmake should be able to
+  locate mpi, osmesa, and python automatically.
 
   The toolchain file sets CMAKE_SYSTEM_NAME to CRAYXT_COMPUTE_LINUX, which
   instructs cmake to use the platform file discussed earlier.
