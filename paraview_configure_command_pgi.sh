@@ -10,7 +10,7 @@ cmake \
 -DBUILD_TESTING=0 \
 -DOPENGL_gl_LIBRARY="" \
 -DCMAKE_CXX_FLAGS="-fastsse -O3" \
--C ~/source/paraview/CMake/TryRunResults-ParaView3-CNL-gcc.cmake \
+-C ~/source/paraview/ParaView/CMake/TryRunResults-ParaView3-cnl-pgi.cmake \
 ~/source/paraview/ParaView
 
 # Flags for coprocessing
