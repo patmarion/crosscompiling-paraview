@@ -9,7 +9,7 @@ set(CMAKE_CXX_COMPILER CC)
 # and a directory where you can install your own compiled software
 set(CMAKE_FIND_ROOT_PATH
     /opt/xt-pe/default
-    /opt/mpt/3.5.0/xt/mpich2/
+    /opt/mpt/3.5.0/xt/mpich2-pgi
     /usr/people/pmarion/install/cnl
   )
 
