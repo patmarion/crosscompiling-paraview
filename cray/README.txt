@@ -61,6 +61,7 @@ Build the paraview host tools natively:
 ---------------------------
 Patching the paraview source:
 
+  Note, this step is not required when using ParaView 3.8 or newer.
   This folder contains a patch which stubs out VTK/Utilities/kwsys/DynamicLoader.cxx
   so that it does not include symbols from libdl.  This may or may not be needed
   depending on if your system supports dynamic libraries.  Since we're doing a static
